@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('type_rooms', function (Blueprint $table) {
             $table->id();
             $table->string('room_type', 100)->nullable()->default();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

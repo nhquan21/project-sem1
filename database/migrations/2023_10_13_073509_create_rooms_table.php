@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreign('type_id')->references('id')->on('type_rooms')->onDelete('cascade');
             $table->tinyInteger('isBooked')->default(1);
             $table->float('price');
+            $table->integer('people')->nullable()->default(2);
             $table->string('image', 255);
             $table->text('description')->nullable()->default();
             $table->softDeletes();
